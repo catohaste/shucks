@@ -1,4 +1,4 @@
-cd ~/Downloads/words/ENV
+cd ENV
 . bin/activate
 cd shucks
 pip install --editable .
