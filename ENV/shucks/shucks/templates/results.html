@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="{{ url_for('get_query') }}" method=post class=form-wrapper>
+	<input type=text name=q  value="{{ q }}" size=30 id=search>
+	<input type=submit value="GO" id=submit>
+</form>
+
+
+{% if val_q %}
+	<p>{{ val_q }} is a valid word</p>
+{% endif %}
+
+{% if error %}
+	<p><strong>Error: </strong> {{ error }}
+{% endif %}
+
+{% if result_miss %}
+	<p>{{ result_miss }}</p>
+{% endif %}
+
+{% if result_anag %}
+	<p>{{ result_anag }}</p>
+{% elif not result_miss %}
+	<p>{{ q }} has no anagrams</p>
+{% endif %}
+
+{% endblock %}

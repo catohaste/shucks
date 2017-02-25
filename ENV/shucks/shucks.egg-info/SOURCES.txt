@@ -1,0 +1,16 @@
+MANIFEST.in
+shucks/__init__.py
+shucks/schema.sql
+shucks/shucks.py
+shucks.egg-info/PKG-INFO
+shucks.egg-info/SOURCES.txt
+shucks.egg-info/dependency_links.txt
+shucks.egg-info/requires.txt
+shucks.egg-info/top_level.txt
+shucks/static/.DS_Store
+shucks/static/logo.png
+shucks/static/newSCOWL.txt
+shucks/static/style.css
+shucks/templates/index.html
+shucks/templates/layout.html
+shucks/templates/results.html

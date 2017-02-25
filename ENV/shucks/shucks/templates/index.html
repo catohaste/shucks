@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form action="{{ url_for('get_query') }}" method=post class=form-wrapper>
+	<input type=text  placeholder="Search for..." name=q  value="{{ q }}" size=30 id=search>
+	<input type=submit value="GO" id=submit>
+</form>
+{% endblock %}
