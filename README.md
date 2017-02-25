@@ -1,6 +1,5 @@
 # website
 
-shucksandsugar
 This is the code for shucksandsugar.com
 
 This project is underdevelopment. The code is all in one package.
