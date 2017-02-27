@@ -34,7 +34,11 @@
 {% if result_anag %}
 	<p>{{ result_anag }}</p>
 {% elif not result_miss %}
-	<p>{{ q }} has no anagrams</p>
+    {% if error %}
+    
+    {% else %}
+	    <p>{{ q }} has no anagrams</p>
+    {% endif %}
 {% endif %}
 
 {% endblock %}
