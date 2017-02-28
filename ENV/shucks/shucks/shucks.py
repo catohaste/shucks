@@ -23,7 +23,7 @@ app.config.update(dict(
 def default():
     """Load the basic page"""
     error=None
-    return render_template('index.html',error=error)
+    return render_template('layout.html',error=error)
     
 @app.route('/', methods=['POST'])
 def get_query():
