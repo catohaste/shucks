@@ -1,44 +1,30 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<div class="flexsearch">
-	<div class="flexsearch--wrapper">
-		<form class="flexsearch--form" action="{{ url_for('get_query') }}" method="post">
-			<div class="flexsearch--input-wrapper">
-				<input class="flexsearch--input" type="text" placeholder="Search..." name=q value="{{ q }}">
-			</div>
-			<input class="flexsearch--submit" type="submit" value="&#10140;"/>
-		</form>
-	</div>
-</div>
+<div class="results">
+  
+  {% if val_q %}
+    <p>{{ val_q }} is a valid word</p>
+  {% endif %}
 
+  {% if error %}
+    <p><strong>Error: </strong> {{ error }}
+  {% endif %}
 
-<!-- <form action="{{ url_for('get_query') }}" method=post class=form-wrapper>
-    <input type=text name=q  value="{{ q }}" size=30 id=search>
-    <input type=submit value="GO" id=submit>
-</form> -->
+  {% if result_miss %}
+    <p>{{ result_miss }}</p>
+  {% endif %}
 
-
-{% if val_q %}
-	<p>{{ val_q }} is a valid word</p>
-{% endif %}
-
-{% if error %}
-	<p><strong>Error: </strong> {{ error }}
-{% endif %}
-
-{% if result_miss %}
-	<p>{{ result_miss }}</p>
-{% endif %}
-
-{% if result_anag %}
-	<p>{{ result_anag }}</p>
-{% elif not result_miss %}
+  {% if result_anag %}
+    <p>{{ result_anag }}</p>
+  {% elif not result_miss %}
     {% if error %}
-    
+
     {% else %}
-	    <p>{{ q }} has no anagrams</p>
+      <p>{{ q }} has no anagrams</p>
     {% endif %}
-{% endif %}
+  {% endif %}
+  
+</div>
 
 {% endblock %}
