@@ -20,12 +20,9 @@ body {
 }
 
 .header {
-	background-color: #FFF;
-	height: 250px;
-    border: 0 0 5px 0;
-	border-color: #000;
-    border-radius: 35px; /* (height/2) + border-width */
-    border-style: solid;
+    background-color: #FFF;
+    height: 150px;
+    border-bottom: 5px #000 solid;
 }
 
 .header h1 {
@@ -135,7 +132,7 @@ input:-moz-placeholder {
   color: #888
 }
 
-.results {
+body p {
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
