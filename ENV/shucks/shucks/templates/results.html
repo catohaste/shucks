@@ -1,30 +1,47 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
+
 {% block body %}
 
 <div id=results>
-  
-  {% if val_q %}
-    <p>{{ val_q }} is a valid word</p>
-  {% endif %}
 
-  {% if error %}
-    <p><strong>Error: </strong> {{ error }}
-  {% endif %}
-
-  {% if result_miss %}
-    <p>{{ result_miss }}</p>
-  {% endif %}
-
-  {% if result_anag %}
-    <p>{{ result_anag }}</p>
-  {% elif not result_miss %}
-    {% if error %}
-
-    {% else %}
-      <p>{{ q }} has no anagrams</p>
+    {% if val_q %}
+    
+        <p>{{ val_q }} is a valid word</p>
+        
     {% endif %}
-  {% endif %}
-  
+
+    {% if error %}
+    
+        <p><strong>Error: </strong> {{ error }}
+            
+    {% endif %}
+
+    {% if result_miss %}
+        
+        {% for i in range(length) %}
+        
+             {{ result_miss[i] }}
+            
+        {% endfor %}
+        
+    {% endif %}
+
+    {% if result_anag %}
+    
+        <p>{{ result_anag }}</p>
+        
+    {% elif not result_miss %}
+    
+        {% if error %}
+
+        {% else %}
+        
+            <p>{{ q }} has no anagrams</p>
+            
+        {% endif %}
+        
+    {% endif %}
+
 </div>
 
 {% endblock %}
