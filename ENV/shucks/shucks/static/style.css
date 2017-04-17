@@ -62,18 +62,22 @@ body {
 
 .results ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 0 20px;
 }
 
-.results li {
+.short {
     float: left;
-    width: 100px;
+    width: 120px;
+}
+
+.long {
+    float: left;
+    width: 200px;
 }
 
 .results li p {
     text-align: left;
-    padding: 0px 16px;
+    /* padding: 0px 16px;*/
 }
 
 /* SEARCH BAR *************************************************************************************/

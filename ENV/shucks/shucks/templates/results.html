@@ -28,26 +28,54 @@
     {% endif %}
 
     {% if result_miss %}
+    
+        {% if q|length <= 8 %}
         
+            <ul>
+                {% for i in result_miss %}
+    
+                     <li class="short"><p>{{ i }}</p></li>
+        
+                {% endfor %}
+            </ul>
+            
+        {% elif q|length > 8 %}
+    
         <ul>
             {% for i in result_miss %}
+
+                 <li class="long"><p>{{ i }}</p></li>
     
-                 <li><p>{{ i }}</p></li>
-        
             {% endfor %}
         </ul>
+        
+        {% endif %}
         
     {% endif %}
 
     {% if result_anag %}
     
-        <ul>
-            {% for i in result_anag %}
+        {% if q|length <= 8 %}
+    
+            <ul>
+                {% for i in result_anag %}
 
-                <li><p>{{ i }}</p></li>
+                    <li class="short"><p>{{ i }}</p></li>
         
-            {% endfor %}
-        </ul>
+                {% endfor %}
+            </ul>
+        
+        {% elif q|length > 8 %}
+    
+            <ul>
+                {% for i in result_anag %}
+
+                    <li class="long"><p>{{ i }}</p></li>
+
+                {% endfor %}
+            </ul>
+            
+        {% endif %}
         
     {% elif not result_miss %}
     
