@@ -32,6 +32,8 @@ body {
 }
 
 .heading {
+    text-decoration: none;
+    color: #000;
     text-align: left;
     padding: 50px 0 0 50px;
 }
