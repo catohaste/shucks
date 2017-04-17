@@ -37,6 +37,8 @@ body {
 	font-weight: normal;
     font-family: 'Vollkorn', serif;
 	font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .heading {
