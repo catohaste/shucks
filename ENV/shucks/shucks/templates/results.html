@@ -2,15 +2,6 @@
 
 {% block body %}
 
-TESTING
-<ul>
-    <li> word 1 </li>
-    <li> word 2 </li>
-    <li> word 3 </li>
-    <li> word 4 </li>
-    <li> word 5 </li>
-</ul>
-
     {% if val_q %}
     
         <p>{{ val_q }} is a valid word</p>
@@ -25,21 +16,25 @@ TESTING
 
     {% if result_miss %}
         
-        {% for i in range(length) %}
+        <ul>
+            {% for i in result_miss %}
+    
+                 <li><p>{{ i }}</p></li>
         
-             <p>{{ result_miss[i] }}</p>
-            
-        {% endfor %}
+            {% endfor %}
+        </ul>
         
     {% endif %}
 
     {% if result_anag %}
     
-        {% for i in result_anag %}
-    
-            <p> {{ i }} </p>
-            
-        {% endfor %}
+        <ul>
+            {% for i in result_anag %}
+
+                <li><p>{{ i }}</p></li>
+        
+            {% endfor %}
+        </ul>
         
     {% elif not result_miss %}
     

@@ -45,9 +45,9 @@ def get_query():
     
     # HYPHENS
     elif "-" in q:
-        result_miss, length=hyphen(q,words)
+        result_miss=hyphen(q,words)
         if result_miss:
-            return render_template('results.html',result_miss=result_miss,length=length)
+            return render_template('results.html',result_miss=result_miss)
         else:
             result_miss = "No words found for " + q
             return render_template('results.html',result_miss=result_miss)
@@ -97,7 +97,7 @@ def hyphen(word, words):
             else:    
                 missing[key] = [i]
     if word in missing:
-        return [missing[word],len(missing[word])]
+        return missing[word]
     else:
         return
 
