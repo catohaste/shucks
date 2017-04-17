@@ -2,7 +2,14 @@
 
 {% block body %}
 
-<div id=results>
+TESTING
+<ul>
+    <li> word 1 </li>
+    <li> word 2 </li>
+    <li> word 3 </li>
+    <li> word 4 </li>
+    <li> word 5 </li>
+</ul>
 
     {% if val_q %}
     
@@ -12,7 +19,7 @@
 
     {% if error %}
     
-        <p><strong>Error: </strong> {{ error }}
+        <p><strong>Error: </strong> {{ error }}</p>
             
     {% endif %}
 
@@ -20,7 +27,7 @@
         
         {% for i in range(length) %}
         
-             {{ result_miss[i] }}
+             <p>{{ result_miss[i] }}</p>
             
         {% endfor %}
         
@@ -28,7 +35,11 @@
 
     {% if result_anag %}
     
-        <p>{{ result_anag }}</p>
+        {% for i in result_anag %}
+    
+            <p> {{ i }} </p>
+            
+        {% endfor %}
         
     {% elif not result_miss %}
     
@@ -41,7 +52,5 @@
         {% endif %}
         
     {% endif %}
-
-</div>
 
 {% endblock %}
