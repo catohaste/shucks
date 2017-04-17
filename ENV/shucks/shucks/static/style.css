@@ -31,9 +31,12 @@ body {
     margin: 0 0 50px 0;
 }
 
-.header h1 {
-	text-decoration: none;
-	color: #000;
+.heading {
+    text-align: left;
+    padding: 50px 0 0 50px;
+}
+
+.heading h1 {
 	font-weight: normal;
     font-family: 'Vollkorn', serif;
 	font-size: 40px;
@@ -41,10 +44,12 @@ body {
     overflow: hidden;
 }
 
-.heading {
-    text-align: left;
-    padding: 50px 0 0 50px;
+.heading h1 a {
+    text-decoration: none;
+    color: #000;
 }
+
+
 
 /* RESULTS ****************************************************************************************/
 
