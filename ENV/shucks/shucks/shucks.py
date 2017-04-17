@@ -23,7 +23,7 @@ app.config.update(dict(
 def default():
     """Load the basic page"""
     error=None
-    return render_template('layout.html',error=error)
+    return render_template('index.html',error=error)
     
 @app.route('/', methods=['POST'])
 def get_query():
@@ -47,10 +47,10 @@ def get_query():
     elif "-" in q:
         result_miss=hyphen(q,words)
         if result_miss:
-            return render_template('results.html',result_miss=result_miss)
+            return render_template('results.html',q=q,result_miss=result_miss)
         else:
-            result_miss = "No words found for " + q
-            return render_template('results.html',result_miss=result_miss)
+            error = "No words found for " + q
+            return render_template('results.html',q=q,error=error)
     
     # VALID WORD
     else:
