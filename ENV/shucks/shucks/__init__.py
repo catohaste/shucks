@@ -1,1 +1,0 @@
-from .shucks import app

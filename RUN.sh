@@ -1,8 +1,4 @@
-cd ENV
-. bin/activate
 cd shucks
-pip install --editable .
-export FLASK_APP=shucks.py
-export FLASK_DEBUG=true
-cd shucks
-flask run
+source env/bin/activate
+pip install -t lib -r requirements.txt
+dev_appserver.py app.yaml --project shucksandsugar
