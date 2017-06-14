@@ -2,7 +2,18 @@
 
 {% block body %}
 
-<div id=results>
+    <div class="flexsearch">
+    	<div class="flexsearch--wrapper">
+    		<form class="flexsearch--form" action="{{ url_for('get_query') }}" method="post">
+    			<div class="flexsearch--input-wrapper">
+    				<input class="flexsearch--input" type="text" placeholder="Search..." name=q value="{{ q }}">
+    			</div>
+    			<input class="flexsearch--submit" type="submit" value="&#10140;"/>
+    		</form>
+    	</div>
+    </div>
+
+    <div class="results">
 
     {% if val_q %}
     
@@ -12,23 +23,59 @@
 
     {% if error %}
     
-        <p><strong>Error: </strong> {{ error }}
+        <p><strong>Error: </strong> {{ error }}</p>
             
     {% endif %}
 
     {% if result_miss %}
+    
+        {% if q|length <= 8 %}
         
-        {% for i in range(length) %}
+            <ul>
+                {% for i in result_miss %}
+    
+                     <li class="short"><p>{{ i }}</p></li>
         
-             {{ result_miss[i] }}
+                {% endfor %}
+            </ul>
             
-        {% endfor %}
+        {% elif q|length > 8 %}
+    
+        <ul>
+            {% for i in result_miss %}
+
+                 <li class="long"><p>{{ i }}</p></li>
+    
+            {% endfor %}
+        </ul>
+        
+        {% endif %}
         
     {% endif %}
 
     {% if result_anag %}
     
-        <p>{{ result_anag }}</p>
+        {% if q|length <= 8 %}
+    
+            <ul>
+                {% for i in result_anag %}
+
+                    <li class="short"><p>{{ i }}</p></li>
+        
+                {% endfor %}
+            </ul>
+        
+        {% elif q|length > 8 %}
+    
+            <ul>
+                {% for i in result_anag %}
+
+                    <li class="long"><p>{{ i }}</p></li>
+
+                {% endfor %}
+            </ul>
+            
+        {% endif %}
         
     {% elif not result_miss %}
     
@@ -41,7 +88,7 @@
         {% endif %}
         
     {% endif %}
-
-</div>
+    
+    </div>
 
 {% endblock %}
