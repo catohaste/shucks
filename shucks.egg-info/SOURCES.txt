@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+shucks/appengine_config.py
+shucks/main.py
+shucks.egg-info/PKG-INFO
+shucks.egg-info/SOURCES.txt
+shucks.egg-info/dependency_links.txt
+shucks.egg-info/requires.txt
+shucks.egg-info/top_level.txt

@@ -9,7 +9,7 @@ import string
 
 ###############################################################################
 
-app = Flask(__name__) # create the application instance :)
+app = Flask('shucks') # create the application instance :)
 app.config.from_object(__name__) # load config from this file, shucks.py
 
 # Load default config and override config from an environment variable
