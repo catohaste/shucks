@@ -1,16 +1,7 @@
-# website
+# shucks
 
-This is the code for shucksandsugar.com
+This is the code for shucksandsugar.com. This project is under development.
 
-This project is underdevelopment. The code is all in one package, but the development goals are split in to a two different steps: function and design. The function is being developed in python, with Flask acting as the interface between the html and the python code. The design is encapsulated by the html and css.
+shucksandsugar.com will be a website application aimed at helping users solve cryptic crosswords. It is a Flask-based application. Currently, the functionality is written in python, though in future a word-list database will be created which will be queried with SQL.
 
-
-FUNCTION
-The point of the website is to allow users to perform a search that will help them to solve cryptic crosswords. It should be easy to use, with the code adapting to the user's needs.
-
-DESIGN
-The website will have a simple and clean design.
-
-In order to run this application, the user can change working directory into the top folder 'website' and then
-
-./RUN.sh
+The application itself is in the folder "shucks", and will be hosted on Google Cloud Platform.
