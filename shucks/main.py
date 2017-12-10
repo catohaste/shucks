@@ -2,10 +2,11 @@
 # IMPORTS
 import os
 # import sqlite3
-from flask import Flask, request, session, g, redirect, url_for, abort, \
-     render_template, flash
+from flask import Flask, request, render_template
 # WORD IMPORTS
 import string
+
+from secret_keys import CSRF_SECRET_KEY
 
 ###############################################################################
 
@@ -14,7 +15,7 @@ app.config.from_object(__name__) # load config from this file, shucks.py
 
 # Load default config and override config from an environment variable
 app.config.update(dict(
- SECRET_KEY='development key'
+ SECRET_KEY=CSRF_SECRET_KEY
 ))
 
 ################################################################################
