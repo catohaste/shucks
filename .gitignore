@@ -56,3 +56,6 @@ coverage.xml
 # Flask stuff:
 instance/
 .webassets-cache
+
+# Secret keys
+*secret_keys.py
