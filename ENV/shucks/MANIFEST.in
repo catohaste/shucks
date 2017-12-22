@@ -1,3 +1,0 @@
-graft shucks/templates
-graft shucks/static
-include shucks/schema.sql

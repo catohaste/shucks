@@ -1,0 +1,2 @@
+In project home directory, where setup.py is located,
+pip install .

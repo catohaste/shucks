@@ -1,0 +1,14 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+# [START handlers]
+handlers:
+- url: /static
+  static_dir: static
+  application_readable: true
+- url: /
+  script: main.app
+- url: /results
+  script: main.app
+# [END handlers]
